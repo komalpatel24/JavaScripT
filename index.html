@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> JavaScript Largest value</h2>
+<!-- <p id="demo">JavaScript can change HTML content.</p> -->
+
+<input type="number" id="xvalue"> 
+<input type="number" id="yvalue">
+<button type="button" onclick="large()">submit</button>
+<p id="result"></p>
+<!-- <p>The Big value is : <br> <span id = "result"></span></p> -->
+<script>
+    
+    var x = document.getElementById('xvalue');
+    var y = document.getElementById('yvalue');
+    var z;
+    function large(){
+            if(x.value > y.value) {
+                z = x.value;
+            }
+            else if(x.value < y.value) {
+                z = y.value;
+            } else {
+                z = NaN;
+            }
+            
+        //  console.log(z);
+         document.getElementById('result').innerHTML = "answer = " + z;
+     } 
+     
+</script>
+
+</body>
+</html>
+
+
+
+

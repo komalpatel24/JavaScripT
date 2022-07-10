@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation</title>
+</head>
+<body>
+            <input type="text" placeholder="First_num" id="firstNumber" />
+            <input type="text" placeholder="Second_num" id="secondNumber" /><br> <br>
+
+            <input type="button" onClick=" Subtraction()" Value="-" /> &nbsp;
+            <input type="button" onClick="Addition()" Value="+" /> &nbsp;
+            <input type="button" onClick="multiply()" Value="*" /> &nbsp;
+            <input type="button" onClick="divide()" Value="/" />
+<br>
+            <span id = "result"></span>
+            </p>
+
+<script>
+
+        function Subtraction() { 
+                var num1 = document.getElementById("firstNumber").value;
+                var num2 = document.getElementById("secondNumber").value;
+                 document.getElementById("result").innerHTML = "Subtraction is : " + num1 - num2 ;
+             }
+
+        function Addition() { 
+              var num1 = document.getElementById("firstNumber").value;
+              var num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = "Addition is : "  + num1 + num2 ;
+        }
+            function multiply() {
+             var num1 = document.getElementById("firstNumber").value;
+              var num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = "Multiplication is : " + num1 * num2 ;
+        }
+        function divide() { 
+              var num1 = document.getElementById("firstNumber").value;
+              var num2 = document.getElementById("secondNumber").value;
+                document.getElementById("result").innerHTML = "Division is : " + num1 / num2 ;
+        }
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>2String_Print</title>
+    <style>
+        .s{
+            margin-top: 15%;
+            margin-left: 30%;
+            text-align: center;
+            width: 40%;
+            height: 50%;
+            background-color: rgb(196, 217, 255);
+            border: 1px solid gray;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="s">
+        
+      <h1>Two String Addition</h1>
+      <input type="text" id="first">
+      <input type="text" id="second"> <br>
+      <br>
+      <button type="button" onclick="string()">submit</button>
+      <p id="print"></p>
+    </div>
+    <script>
+      function string() {
+        var first = document.getElementById("first").value;
+        var second = document.getElementById("second").value;
+
+        document.getElementById("print").innerHTML = first + second;
+      }
+    </script>
+  </body>
+</html>
