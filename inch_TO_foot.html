@@ -4,16 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inch_To_Foot</title>
+    <style>
+      .convert{
+        margin-top: 15%;
+            margin-left: 30%;
+            text-align: center;
+            width: 40%;
+            height: 50%;
+            background-color: rgb(196, 217, 255);
+            border: 1px solid gray;
+      }
+    </style>
 </head>
 <body>
-   
+   <div class="convert">
+     <h2>Inch_To_Foot_Converter</h2>
         <label>Foot</label>
         <input id="inputFeet" type="number" placeholder="Foot" 
                 oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
      
       <p>Inches: <span id="outputInches"></span></p>
-      
+    </div>
       <script>
       function LengthConverter(value) {
         document.getElementById("outputInches").innerHTML=value*12;
