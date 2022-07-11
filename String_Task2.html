@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="first">
+    <button type="button" onclick="string()">Submit</button>
+
+    <script>
+        function string(){
+            var text = document.getElementById('first').value;
+            var length = "text";
+
+
+            if(length >= 6 && length <= 12){
+                for( i=0; length>i; i++)
+                (i[0] + "<br>")
+            }
+            else{
+                alert("Min value 6 &  Max value 12");
+            }
+        }
+    </script>
+</body>
+</html>
