@@ -11,20 +11,27 @@
             text-align: center;
             width: 40%;
             height: 50%;
-            background-color: rgb(196, 217, 255);
+            background-color: rgb(31, 91, 204);
             border: 1px solid gray;
         }
+        input{
+            padding: 1%;
+            border-radius: 5%;
+        }
+        button{
+            padding: 1% 2.5%;
+        }
+        
     </style>
   </head>
   <body>
     <div class="s">
         
       <h1>Two String Addition</h1>
-      <input type="text" id="first">
-      <input type="text" id="second"> <br>
-      <br>
-      <button type="button" onclick="string()">submit</button>
-      <p id="print"></p>
+      <input type="text" id="first" placeholder="First Value">
+      <input type="text" id="second" placeholder="Second Value"> <br><br>
+      <button type="button" onclick="string()">submit</button> <br> <br>
+      Answer : <input type="text" id="print"> <br> <br>
     </div>
     <script>
       function string() {

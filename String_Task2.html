@@ -5,25 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .s{
+            margin-top: 15%;
+        margin-left: 30%;
+        text-align: center;
+        width: 40%;
+        height: 50%;
+        background-color: rgb(31, 91, 204);
+        border: 1px solid gray;
+    }
+    input{
+        padding: 1%;
+        border-radius: 5%;
+    }
+    button{
+        padding: 1% 2.5%;
+    }
+    </style>
 </head>
 <body>
-    <input type="text" id="first">
-    <button type="button" onclick="string()">Submit</button>
-
+    <div class="s">
+        <h1>Strring Min value 6 & Max value 12</h1>
+        <input type="text" id="first"> <br><br>
+        <button type="button" onclick="string()">Submit</button> <br><br>
+        <p id="answer"></p>
+    </div>3
     <script>
         function string(){
             var text = document.getElementById('first').value;
-            var length = "text";
-
-
+            var length = text.length ;
+            var txt="";
             if(length >= 6 && length <= 12){
-                for( i=0; length>i; i++)
-                (i[0] + "<br>")
+                for( i=0; i<length; i++)
+                txt=txt+(text[i] + "<br>");
             }
             else{
-                alert("Min value 6 &  Max value 12");
+                alert("Min value 6  &  Max value 12");
             }
+        document.getElementById("answer").innerHTML=txt;
         }
     </script>
+
+    <!-- <script>
+            function string(){
+            var text = document.getElementById('first').value;
+            var str = text.slice("0");
+            text = "";
+            for (i=0; i<str.length; i++) {
+            text =text + (str[i] + "<br>");
+            }
+             document.getElementById("answer").innerHTML = text;
+         }
+    </script> -->
+
+    
 </body>
 </html>

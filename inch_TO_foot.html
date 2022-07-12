@@ -8,13 +8,20 @@
     <style>
       .convert{
         margin-top: 15%;
-            margin-left: 30%;
-            text-align: center;
-            width: 40%;
-            height: 50%;
-            background-color: rgb(196, 217, 255);
-            border: 1px solid gray;
-      }
+        margin-left: 30%;
+        text-align: center;
+        width: 40%;
+        height: 50%;
+        background-color: rgb(31, 91, 204);
+        border: 1px solid gray;
+    }
+    input{
+        padding: 1%;
+        border-radius: 5%;
+    }
+    button{
+        padding: 1% 2.5%;
+    }
     </style>
 </head>
 <body>
@@ -22,9 +29,9 @@
      <h2>Inch_To_Foot_Converter</h2>
         <label>Foot</label>
         <input id="inputFeet" type="number" placeholder="Foot" 
-                oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
-     
-      <p>Inches: <span id="outputInches"></span></p>
+                oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)"> <br><br>
+                <!-- Inches : <input type="text" id="outputInches">  <br><br>    -->
+           <p>Inches: <span id="outputInches"></span></p>
     </div>
       <script>
       function LengthConverter(value) {

@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operation</title>
+    <style>
+        .o{
+          margin-top: 15%;
+        margin-left: 30%;
+        text-align: center;
+        width: 40%;
+        height: 50%;
+        background-color: rgb(31, 91, 204);
+        border: 1px solid gray;
+    }
+    input{
+        padding: 1%;
+        border-radius: 5%;
+    }
+    button{
+        padding: 1% 2.5%;
+    }
+    </style>
 </head>
 <body>
+        <div class="o">
+                <h1>Calculater</h1>
             <input type="text" placeholder="First_num" id="firstNumber" />
             <input type="text" placeholder="Second_num" id="secondNumber" /><br> <br>
 
@@ -14,10 +34,9 @@
             <input type="button" onClick="Addition()" Value="+" /> &nbsp;
             <input type="button" onClick="multiply()" Value="*" /> &nbsp;
             <input type="button" onClick="divide()" Value="/" />
-<br>
-            <span id = "result"></span>
-            </p>
-
+<br> <br>
+           <input type="text" id="result"> <br><br>
+        </div>
 <script>
 
         function Subtraction() { 

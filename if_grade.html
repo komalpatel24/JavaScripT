@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s{
+            margin-top: 15%;
+            margin-left: 30%;
+            text-align: center;
+            width: 40%;
+            height: 50%;
+            background-color: rgb(31, 91, 204,0.9);
+            border: 1px solid gray;
+        }
+        input{
+            padding: 1%;
+            border-radius: 5%;
+        }
+        button{
+            padding: 1% 2.5%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="s">
+        <h1>only if Use Check a Grade</h1>
+        Gujarati : <input type="text" id="gujarati" placeholder="Enter Marks">  <br><br>
+        English : <input type="text" id="english" placeholder="Enter Marks"> <br> <br>
+        Maths : <input type="text" id="maths" placeholder="Enter Marks"> <br> <br>
+       
+        <button type="button" onclick="grade()">Submit</button>  <br><br>
+        <p id="answer"></p>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function grade(){
+            var g = parseInt(document.getElementById("gujarati").value);
+            var e = parseInt(document.getElementById("english").value);
+            var m = parseInt(document.getElementById("maths").value);
+            // var Total = g + e + m;
+             document.getElementById("answer").innerHTML = g + e + m;
+
+            if(Total>80){
+                document.getElementById("demo").innerHTML = "A Grade";
+            }
+            if(){
+                document.getElementById("demo").innerHTML = "B Grade";
+            }
+            if(){
+                document.getElementById("demo").innerHTML = "C Grade";
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>

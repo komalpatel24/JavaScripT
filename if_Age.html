@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .s{
+        margin-top: 15%;
+        margin-left: 30%;
+        text-align: center;
+        width: 40%;
+        height: 50%;
+        background-color: rgb(31, 91, 204);
+        border: 1px solid gray;
+    }
+    input{
+        padding: 1%;
+        border-radius: 5%;
+    }
+    button{
+        padding: 1% 2.5%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="s">
+        <h1>only if Use Check a Age</h1>
+        <input type="text" id="first" placeholder="Enter Age"> <br><br>
+        <button type="button" onclick="age()">Submit</button> <br> <br>
+        <p id="demo"></p>
+    </div>
+
+    <script>
+        function age(){
+            var A = document.getElementById("first").value;
+
+            if(A>=18){
+               document.getElementById("demo").innerHTML = "You Can Marry";
+            }
+            if(A<18){
+               document.getElementById("demo").innerHTML = "You Can't Marry";
+            }
+
+        }
+    </script>
+
+
+</body>
+</html>
