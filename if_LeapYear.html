@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s{
+            margin-top: 7%;
+            margin-left: 30%;
+            text-align: center;
+            border-radius: 5%;
+            width: 40%;
+            height: 50%;
+            background-color: rgb(31, 91, 204,0.6);
+            border: 1px solid gray;
+        }
+        input{
+            padding: 1%;
+            border-radius: 8%;
+        }
+        button{
+            padding: 1% 2.5%;
+        }
+    </style>
+</head>
+<body>
+    <div class="s">
+        <h1>Leap year </h1>
+        <input type="text" id="first" placeholder="Enter value"> <br> <br>
+        <button type="text" onclick="leap()">Submit</button> <br><br>
+        <input type="text" id="leap_year"> <br><br>
+    </div>
+        <script>
+            function leap(){
+                var y = document.getElementById("first").value;
+                 if(y % 4 ==0){
+                    document.getElementById("leap_year").value = "Leap year";
+                 }
+                 if(y % 4 != 0){
+                    document.getElementById("leap_year").value = "Not Leap Year";
+                 }
+            }
+        </script>
+
+</body>
+</html>

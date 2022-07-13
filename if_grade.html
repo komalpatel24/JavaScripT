@@ -7,22 +7,22 @@
     <title>Document</title>
     <style>
         .s{
-            margin-top: 15%;
+            margin-top: 7%;
             margin-left: 30%;
             text-align: center;
+            border-radius: 5%;
             width: 40%;
             height: 50%;
-            background-color: rgb(31, 91, 204,0.9);
+            background-color: rgb(31, 91, 204,0.7);
             border: 1px solid gray;
         }
         input{
             padding: 1%;
-            border-radius: 5%;
+            border-radius: 8%;
         }
         button{
             padding: 1% 2.5%;
         }
-        
     </style>
 </head>
 <body>
@@ -33,26 +33,29 @@
         Maths : <input type="text" id="maths" placeholder="Enter Marks"> <br> <br>
        
         <button type="button" onclick="grade()">Submit</button>  <br><br>
-        <p id="answer"></p>
-        <p id="demo"></p>
+        <input type="text" id="answer" placeholder="Total">  <br><br>
+        <input type="text" id="s" placeholder="Persentage"> <br> <br>
+        <input type="text" id="demo" placeholder="Grade"> <br> <br>
+
     </div>
 
     <script>
         function grade(){
-            var g = parseInt(document.getElementById("gujarati").value);
+            var g = Number(document.getElementById("gujarati").value);
             var e = parseInt(document.getElementById("english").value);
             var m = parseInt(document.getElementById("maths").value);
-            // var Total = g + e + m;
-             document.getElementById("answer").innerHTML = g + e + m;
-
-            if(Total>80){
-                document.getElementById("demo").innerHTML = "A Grade";
+            var Total = g + e + m;
+           var  S = (Total/300)*100;
+             document.getElementById("answer").value = "Total is : " + Total ;
+             document.getElementById("s").value = S + "%";
+            if(S>80){
+                document.getElementById("demo").value = "A Grade";
             }
-            if(){
-                document.getElementById("demo").innerHTML = "B Grade";
+            if(S>=60 && S>=80){
+                document.getElementById("demo").value = "B Grade";
             }
-            if(){
-                document.getElementById("demo").innerHTML = "C Grade";
+            if(S<60){
+                document.getElementById("demo").value = "C Grade";
             }
 
         }

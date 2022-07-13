@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s{
+            margin-top: 10%;
+            margin-left: 30%;
+            text-align: center;
+            border-radius: 5%;
+            width: 40%;
+            height: 50%;
+            background-color: rgb(31, 91, 204,0.7);
+            border: 1px solid gray;
+        }
+        input{
+            padding: 1%;
+            border-radius: 8%;
+            width: 9.5%;
+        }
+        button{
+            padding: 1% 2.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="s">
+        <h1>if_else Use Calculator</h1>
+        <input type="text" id="first" placeholder="Value" 
+                oninput="KID(this.value)" onchange="KID(this.value)"> 
+        <input type="text" id="operator" placeholder="Operator" 
+                oninput="KID(this.value)" onchange="KID(this.value)">
+        <input type="text" id="second" placeholder="Value" 
+                oninput="KID(this.value)" onchange="KID(this.value)"> <br><br>
+
+        <input type="text" id="answer" placeholder="Answer"> <br><br>
+    </div>
+<script>
+    function KID(){
+     var K = Number(document.getElementById("first").value);
+     var I = document.getElementById("operator").value;
+     var D = Number(document.getElementById("second").value);
+
+     if(I == '+'){
+        document.getElementById("answer").value = K+D;
+     } else if(I == '-'){
+        document.getElementById("answer").value = K-D;
+     } else if(I == 'x'){
+        document.getElementById("answer").value = K*D;
+     }else if(I == '/'){
+        document.getElementById("answer").value = K/D;
+     } else {
+        document.getElementById("answer").value = K%D;
+     }
+
+    }
+</script>
+
+
+</body>
+</html>
