@@ -39,12 +39,11 @@
         <input type="text" id="answer" placeholder="Answer"> <br><br>
     </div>
 <script>
-    // function KID(){
+    function KID(){
      var K = Number(document.getElementById("first").value);
      var I = document.getElementById("operator").value;
      var D = Number(document.getElementById("second").value);
     let A;
-
    
     switch (I){
         case '+':
@@ -64,12 +63,9 @@
             break;
         default:
             return 0;
-        document.getElementById("answer").value = A;
     }
-
-    // }
-
-
+    document.getElementById("answer").value = A;
+    }
 </script>
 
 </body>
