@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loop{
+            margin-top: 10%;
+            margin-left: 30%;
+            position: relative;
+            text-align: center;
+            border-radius: 1.5em;
+            padding: 3%;
+            width: 40%;
+            height: 50%;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            font-family:'Roboto', sans-serif;
+            border: 1px solid gray;
+        }
+        button, input{
+                background-color: inherit;
+                color: white;
+                margin: 0.5em;
+                font-weight: 300;
+                padding: 0.5em;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1em;
+                border: 1px solid white;
+                border-radius: 0.2em;
+                transition: 0.3s all;
+                }
+        input:focus{
+            outline: 0;
+            background-color: white;
+            color: black;
+            }
+        button:hover, input:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            }
+            button:active{
+                transform: translate(0, 4px);
+            }
+    </style>
+</head>
+<body>
+    <div class="loop">
+        <h1>Enter Two Value In Beetween All Value Addition </h1>
+        <input type="text" id="first" placeholder="Enter Value" 
+                oninput="KID(this.value)" onchange="KID(this.value)"> 
+        <input type="text" id="second" placeholder="Enter Value" 
+                oninput="KID(this.value)" onchange="KID(this.value)">
+        
+        <!-- <button onclick="loop()">Submit</button> <br><br> -->
+        <!-- <p id="demo"></p> -->
+        <input type="text" id="D" placeholder="Answer"> <br><br>
+    </div>
+
+    <script>
+        function KID(){
+            var K = Number(document.getElementById("first").value);
+            var I = Number(document.getElementById("second").value);
+            for (y=0; K<=I; K++) {
+            y = y + K;
+        }
+            document.getElementById("D").value = "Total = " + y;
+    }
+        
+    </script>
+
+</body>
+</html>

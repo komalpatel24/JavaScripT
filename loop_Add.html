@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loop{
+            margin-top: 10%;
+            margin-left: 30%;
+            position: relative;
+            text-align: center;
+            border-radius: 1.5em;
+            width: 40%;
+            height: 50%;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            font-family:'Roboto', sans-serif;
+            border: 1px solid gray;
+        }
+        button, input{
+                background-color: inherit;
+                color: white;
+                margin: 0.5em;
+                font-weight: 300;
+                padding: 0.5em;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1em;
+                border: 1px solid white;
+                border-radius: 0.2em;
+                transition: 0.3s all;
+                }
+        /* input{
+            padding: 1%;
+            border-radius: 8%;
+        } */
+        input:focus{
+            outline: 0;
+            background-color: white;
+            color: black;
+            }
+        button:hover, input:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            }
+            
+            button:active{
+                transform: translate(0, 4px);
+            }
+        /* button{
+            padding: 1% 2.5%;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="loop">
+        <h1>Loop Use Value Addition</h1>
+        <input type="text" id="first" placeholder="Enter Value"> <br><br>
+        <button onclick="loop()">Submit</button> <br><br>
+        <!-- <p id="demo"></p> -->
+        <input type="text" id="demo" placeholder="Answer"> <br><br>
+    </div>
+    <script>
+        function loop(){
+            var K = Number(document.getElementById("first").value);
+        for (x=0,y=0; x<=K; x++) {
+            y = y + x;
+        }
+            document.getElementById("demo").value = "Total = " + y;
+    }
+    </script>
+    
+    <!-- <p id="demo"></p>
+    <script>
+        var y = 0;
+        var x;
+        for (x = 1; x <= 10; x++) {
+            document.write(x + "<br>")
+            y = y + x;
+        }
+        document.write("sum" + y + "<br>")
+    </script> -->
+
+
+    <!-- <script>
+        let sum = 0;
+        for (let i = 1; i <= 9; i++) {
+            sum = sum + i;
+            document.getElementById("demo").innerHTML = +sum;
+        }
+    </script> -->
+
+</body>
+
+</html>
