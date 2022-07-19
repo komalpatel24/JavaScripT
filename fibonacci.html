@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <div id="output"></div>
+ 	<input type="text" id="D" value="1000" oninput="refresh()">  <br><br>
+   <!-- <input type="text" id="D" placeholder="Enter Value" 
+   oninput="KID(this.value)" onchange="KID(this.value)">  <br><br> -->
+  <!-- <input type="text" id="I" placeholder="Fibonacci Value"> -->
+  <!-- <div id="I"></div> -->
+
+   <script>
+     function fibonacci(D) {
+      // var input = Number(document.getElementById('input').value);
+      // var output = document.getElementById('output').value = ;
+	  var F = 1, Fp=0,Fn, fib=[];
+	   while (Fp <= D){
+			fib.push(Fp);
+			Fn = F +Fp; Fp = F; F = Fn;
+		}
+	return fib;
+}
+//grab the code output, and display in the on the page...
+var input = document.querySelector('input');
+var output = document.querySelector('#output');
+output.textContent = fibonacci(input.value).join(", ");
+
+function refresh(){
+	output.textContent = fibonacci(input.value).join(", ");
+	sumOdds();
+}
+   </script>
+
+<!-- <script>
+  function KID(){
+    const K = Number(document.getElementById("D").value);
+      let n1 = 0, n2 = 1, nextTerm;
+
+      console.log('Fibonacci Series:');
+
+      for (let i = 1; i <= K; i++) {
+          console.log(n1);
+          nextTerm = n1 + n2;
+          n1 = n2;
+          n2 = nextTerm;
+      }
+      document.getElementById("I").innerHTML =nextTerm;
+    }
+</script> -->
+
+</body>
+</html>

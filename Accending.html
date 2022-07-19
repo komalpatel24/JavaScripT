@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="I"></div>
+    <button type="button" onclick="KID()">Submit</button>
+
+<script>
+    var num = [40,20,10,50,30,80];
+    document.getElementById("demo").innerHTML = num;
+    
+    function KID(){
+        var K;
+        var D;
+        num.sort(function(K,D){
+            return K-D
+        });
+        document.getElementById("I").innerHTML = num;
+    }
+</script>
+
+</body>
+</html>
