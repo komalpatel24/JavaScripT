@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .String_Search{
+            margin-top: 4.7%;
+            margin-left: 30%;
+            position: relative;
+            text-align: center;
+            border-radius: 1.5em;
+            padding: 3%;
+            width: 40%;
+            height: 50%;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            font-family:'Roboto', sans-serif;
+            border: 1px solid rgb(180, 177, 177);
+        }
+         textarea{
+                background-color: inherit;
+                color: white;
+                margin: 0.5em;
+                font-weight: 300;
+                padding: 0.5em;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1em;
+                border: 1px solid white;
+                border-radius: 0.2em;
+                transition: 0.3s all;
+                }
+                textarea:focus{
+            outline: 0;
+            background-color: white;
+            color: black;
+            box-shadow: 0 4px 8px 5 rgba(0, 0, 0, 0.2), 0 6px 20px 5 rgba(0, 0, 0, 0.19);
+            }
+        textarea:hover{
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            }
+           
+    </style>
+</head>
+<body>
+    <div class="String_Search">
+    
+    <textarea id="D" rows="7" cols="50" oninput="K()" placeholder="Enter A Text...."></textarea> <br> <br>
+    <!-- <button type="button" onclick="K()">Click</button> -->
+    <br>
+    <p id="K"></p>
+    <p id="I"></p>
+    <p id="d"></p>
+    <p id="S"></p> <br><br>
+
+        </div>
+    <script>
+        function K() {
+            let Input = document.getElementById('D').value;
+
+            let Charcter = Input.length;
+            let Word = Input.match(/\w+/g).length;
+            let Line = Input.split(/\n/).length;
+            let Space = Input.split(" ").length;
+
+            document.getElementById('K').innerHTML = "The Total Charcter is = " + Charcter;
+            document.getElementById('I').innerHTML = "The Total Word is = " + Word;
+            document.getElementById('d').innerHTML = "The Total Line is = " + Line;
+            document.getElementById('S').innerHTML = "The Total Space is = " + (Space - 1);
+        }
+    </script>
+
+          
+</body>
+</html>
